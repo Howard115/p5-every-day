@@ -2,9 +2,10 @@
 function fetchRandomSketch() {
     fetch('/fetch-random-sketch')
         .then(response => response.json())
-        .then(code => {
-            console.log(code);
-            // Here you can add logic to update the sketch with the new code
+        .then(data => {
+            console.log('Sketch updated successfully');
+            // Reload the page to reinitialize the sketch
+            window.location.reload();
         })
         .catch(error => {
             console.error('Error fetching sketch:', error);

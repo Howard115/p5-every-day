@@ -11,7 +11,7 @@ def index():
 @app.route('/fetch-random-sketch')
 def fetch_random_sketch():
     random_sketch_id = random.randint(1, 1000)
-    url = f"https://openprocessing.org/api/sketch/{random_sketch_id}/code"
+    url = f"https://openprocessing.org/api/sketch/1029981/code"
     
     try:
         response = requests.get(url)
